@@ -1,6 +1,6 @@
-<form action="unidades/guardar<?= isset($unidad) ? "/$unidad->id_unidad" : "" ?>" method="post" class="form-box" role="form">
+<form action="index.php?route=unidades/guardar<?= isset($unidad) ? "/$unidad->id_unidad" : "" ?>" method="post" class="form-box" role="form">
     <h2 class="form-signin-heading"><?=$title?></h2>
-    
+
     <label>Código</label>
     <input type="text" name="id_unidad" class="form-control" placeholder="kg, und" <?= isset($unidad) ? "value=\"$unidad->id_unidad\" disabled" : "" ?>>
     

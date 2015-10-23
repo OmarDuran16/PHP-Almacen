@@ -1,12 +1,12 @@
 <?php
 $route = isset($_GET['route']) ? $_GET['route'] : "welcome";
 
-ob_start();
+ob_start();  //habilita el buffer de  salida, cualquier cosa q se trate de imprimir, se puede capturar en una variable y se puede mostrar
 switch($route) {
     case "unidades":
         $title = "Unidades";
         include_once("unidades/index.php");
-        $content = ob_get_contents();
+        $content = ob_get_contents();//traslada el codigo en la variable para poder mostrarla
         break;
     case "categorias":
         $title = "Categorías";
@@ -32,5 +32,5 @@ switch($route) {
         $content = ob_get_contents();
         break;
 }
-ob_end_clean();
+ob_end_clean();//finaliza la optencion de datos
 include_once("template.php");

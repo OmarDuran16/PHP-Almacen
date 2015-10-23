@@ -1,6 +1,6 @@
 <?php
 	$f = fopen("data/productos.csv", "r");
-	$productos = explode("\n",fread($f, filesize("data/productos.csv")));
+	$productos = explode("\n",fread($f, filesize("data/productos.csv"))); //convierte un texto en array
 	fclose($f);
 ?>
 <div class="form-box">
